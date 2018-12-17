@@ -2,6 +2,7 @@
   "name": "hooks-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sanderdrummer.github.io/hooks-list/",
   "dependencies": {
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.15",
@@ -9,6 +10,7 @@
     "@types/react-dom": "^16.0.11",
     "bricks-of-sand": "^0.0.20",
     "downshift": "^3.1.7",
+    "gh-pages": "^2.0.1",
     "react": "^react@16.7.0-alpha.2",
     "react-dom": "^react@16.7.0-alpha.2",
     "react-scripts": "2.1.1",
@@ -20,7 +22,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
