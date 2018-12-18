@@ -22,6 +22,7 @@ export const ArticleForm = (props: { onSelect: (article: string) => void }) => {
       }}
       itemToString={() => ''}>
       {({
+        clearSelection,
         getInputProps,
         getItemProps,
         getMenuProps,
@@ -39,6 +40,7 @@ export const ArticleForm = (props: { onSelect: (article: string) => void }) => {
                   if (inputValue) {
                     updateArticles(inputValue);
                     props.onSelect(inputValue);
+                    clearSelection();
                   }
                 }}
               />

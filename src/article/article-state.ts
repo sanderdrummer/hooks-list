@@ -34,11 +34,25 @@ export function useArticleEntries() {
     updateMap({});
   };
 
+  const toggleEntry = (entry: ArticleEntry) => {
+    updateEntries({
+      ...entry,
+      inBasket: !entry.inBasket,
+    });
+  };
+
+  const updateAmount = (entry: ArticleEntry, amount: string) => {
+    updateEntries({
+      ...entry,
+      amount,
+    });
+  };
+
   const entries = Object.keys(map)
     .map(key => map[key])
     .sort((a, b) => (a.inBasket === b.inBasket ? 0 : a.inBasket ? 1 : -1));
 
-  return { updateEntries, entries, clear };
+  return { updateEntries, updateAmount, toggleEntry, entries, clear };
 }
 
 export function useArticleStore() {

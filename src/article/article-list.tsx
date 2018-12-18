@@ -5,14 +5,13 @@ import { ArticleForm } from './article-form';
 import { Flex, Input, Separator, Block, PrimaryButton } from 'bricks-of-sand';
 
 export const ArticleList = () => {
-  const { entries, updateEntries, clear } = useArticleEntries();
-
-  const toggleEntry = (entry: ArticleEntry) => {
-    updateEntries({
-      ...entry,
-      inBasket: !entry.inBasket,
-    });
-  };
+  const {
+    entries,
+    updateEntries,
+    updateAmount,
+    toggleEntry,
+    clear,
+  } = useArticleEntries();
 
   const toBasket = entries.filter(entry => !entry.inBasket);
   const inBasket = entries.filter(entry => entry.inBasket);
@@ -28,12 +27,7 @@ export const ArticleList = () => {
           <div>
             <Input
               value={entry.amount}
-              onChange={e =>
-                updateEntries({
-                  ...entry,
-                  amount: e.target.value,
-                })
-              }
+              onChange={e => updateAmount(entry, e.target.value)}
             />
           </div>
           <div onClick={() => toggleEntry(entry)}>{entry.name}</div>
