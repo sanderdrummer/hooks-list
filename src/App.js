@@ -7,16 +7,9 @@ import {
   HeaderNavBar,
   ThemeSwitcher,
   Block,
-  injectGlobal,
-  resetCss,
 } from 'bricks-of-sand';
 
-injectGlobal(resetCss);
-injectGlobal({
-  body: {
-    fontFamily: 'sans-serif',
-  },
-});
+import './app.css';
 
 class App extends Component {
   render() {
