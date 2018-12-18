@@ -39,8 +39,9 @@ export const ArticleList = () => {
           padding="0.5rem 1rem"
           key={entry.name}
           onClick={() => toggleEntry(entry)}
-          justifyContent="center">
-          {entry.name}
+          justifyContent="space-between">
+          <div>{entry.amount}</div>
+          <div>{entry.name}</div>
         </Flex>
       ))}
       <Block padding="1rem">
