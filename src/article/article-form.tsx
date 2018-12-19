@@ -34,7 +34,11 @@ export const ArticleForm = (props: { onSelect: (article: string) => void }) => {
         <div>
           <Relative>
             <Flex>
-              <Input placeholder="Artikel" {...getInputProps()} />
+              <Input
+                style={{ marginRight: '1rem' }}
+                placeholder="Artikel"
+                {...getInputProps()}
+              />
               <AcceptButton
                 onClick={() => {
                   if (inputValue) {
@@ -59,7 +63,7 @@ export const ArticleForm = (props: { onSelect: (article: string) => void }) => {
                       isHovered={highlightedIndex === index}
                       isSelected={selectedItem === item}
                       {...getItemProps({ item, index })}
-                      key={item}>
+                      key={item.name}>
                       {item.name}
                     </DropDownCardItem>
                   ))}
