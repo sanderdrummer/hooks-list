@@ -1891,10 +1891,10 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-bricks-of-sand@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/bricks-of-sand/-/bricks-of-sand-0.1.0.tgz#a1ddc724cb2264ffe537be9986c874d7c363834d"
-  integrity sha512-PQS2a32okoiB24kt1Y/LGys6JiJQ/maNRWqAwgXx74Cbq+yIznODpWmexvJ3kTdJso18eT85SFqKui+wlkYw9g==
+bricks-of-sand@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/bricks-of-sand/-/bricks-of-sand-0.1.1.tgz#c7f0c8b4fcdaa708f836e1b834bde2c31b1df649"
+  integrity sha512-wawVRYIiGt2kLXGoTCxVQotvPJl3zRNhETusRPo0WEQy3FM/cL6T45cRXvcJNKDwcfK5LlpKMOzqGIDKvLKaXA==
   dependencies:
     "@emotion/core" "^10.0.5"
     "@emotion/styled" "^10.0.5"
